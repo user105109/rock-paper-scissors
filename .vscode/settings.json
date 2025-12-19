@@ -1,0 +1,7 @@
+{
+  "git.enabled": true,
+  "git.autoRepositoryDetection": false,
+  "git.ignoredRepositories": [
+    "C:\\Users\\zouhair"
+  ]
+}
