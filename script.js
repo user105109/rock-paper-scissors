@@ -2,7 +2,7 @@
 
 // I - GET HUMAN AND COMPUTER CHOICES
 
-// 1- GET THE COMPUTER'S CHOICE
+//1- GET THE COMPUTER'S CHOICE
 
 function getComputerChoice() {
     const randomValue = Math.random();
