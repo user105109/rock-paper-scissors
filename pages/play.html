@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bitcount+Prop+Single:wght@100..900&family=Caudex:ital,wght@0,400;0,700;1,400;1,700&family=Cedarville+Cursive&family=Jacquard+24&family=Roboto:ital,wght@0,100..900;1,100..900&family=Science+Gothic:wght@100..900&family=Sixtyfour&family=Workbench&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Bitcount+Prop+Single:wght@100..900&family=Caudex:ital,wght@0,400;0,700;1,400;1,700&family=Cedarville+Cursive&family=Jacquard+24&family=Pixelify+Sans:wght@400..700&family=Roboto:ital,wght@0,100..900;1,100..900&family=Science+Gothic:wght@100..900&family=Sixtyfour&family=Workbench&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../styles/play-style.css">
+    <script src="../scripts/play-script.js" defer></script>
+</head>
+<body>
+    <div class="first-layer-container">
+        <div class="background"></div>
+        <div class="select-background">
+            <div class="select-paragraph">
+                <h2 class="select-mode">SELECT YOUR WEAPON WARRIOR</h2>
+            </div>
+        </div>
+        <div class="weapons">
+            <div class="cta">
+                <img id="btn-home" class="btn home" src="../assets/icons/home_465277.png" alt="volume control">
+            </div>
+            <div class="choice sword">
+                <h3>SWORD</h3>
+                <button id="sword-pick" class="btn btn-weapon" type="button"><img class="weapon" src="../assets/icons/sword_458549.png" alt=""></button>
+            </div>
+            <div class="choice paper">
+                <h3>SPELL</h3>
+                <button id="spell-pick" class="btn btn-weapon" type="button"><img class=" weapon" src="../assets/icons/marriage_12751572.png" alt=""></button>
+            </div>
+            <div class="choice shield">
+                <h3>SHIELD</h3>
+                <button id="shield-pick" class="btn btn-weapon" type="button"><img class=" weapon" src="../assets/icons/shield_15046867.png" alt=""></button>
+            </div>
+        </div>
+    </div>
+        
+    <div class="hidden second-layer-container" >
+        <div class="split-background">
+            <div class="user-split">
+                <img class="user-weapon sword-weapon weapon-img" src="../assets/img/pngwing.com.png" alt="sword">
+                <img class="user-weapon spell-weapon weapon-img" src="../assets/img/magic-book-removebg-preview.png" alt="magic spell">
+                <img class="user-weapon shield-weapon weapon-img" src="../assets/img/shield.png" alt="shield">
+            </div>
+            <div class="computer-split">
+                <img class="computer-weapon sword-weapon weapon-img" src="../assets/img/pngwing.com.png" alt="sword">
+                <img class="computer-weapon spell-weapon weapon-img" src="../assets/img/magic-book-removebg-preview.png" alt="magic spell">
+                <img class=" computer-weapon shield-weapon weapon-img" src="../assets/img/shield.png" alt="shield">
+            </div>
+        </div>
+
+        
+
+        <div class="score">
+            <div class="warriorScore">
+                <h3 class="me">You</h3>
+                <div class="player-points">
+
+                </div>
+            </div>
+            <div class="machineScore">
+                <h3 class="computer">Computer</h3>
+                <div class="computer-points">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="gameResult" class="game-result hidden">
+        <img id="resultImage" src="" alt="Game Result">
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const clickSound = new Audio('../assets/sounds/click.m4a');
+            clickSound.load(); // Preload it
+            
+            document.addEventListener('click', (e) => {
+                if (e.target.closest('img') || e.target.closest('button')) {
+                    clickSound.currentTime = 0; // Reset to start
+                    clickSound.play();
+                }
+            });
+        });
+    </script>
+</body>
+</html>
